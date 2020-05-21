@@ -1,0 +1,5 @@
+Given an array, rotate the array to the right by k steps, where k is non-negative.
+
+def rotate(self, nums: List[int], k: int) -> None:
+        nums[:k%len(nums)], nums[k%len(nums):] = nums[::-1][:k%len(nums)][::-1], nums[::-1][k%len(nums):][::-1]
+        
